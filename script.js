@@ -16,28 +16,44 @@ document.getElementById('form-certificado').addEventListener('submit', function 
     const sobrenome = document.getElementById('sobrenome').value;
     const numeroCertificado = document.getElementById('numero-certificado').value;
 
-    // Aqui você pode implementar a lógica de validação
-    // Por enquanto, vamos apenas verificar se o número tem 6 dígitos alfanuméricos
+    // Verifica se o número do certificado é válido
     if (numeroCertificado.length === 6 && /^[A-Z0-9]{6}$/.test(numeroCertificado)) {
+        // Armazena os dados no LocalStorage
+        let certificados = JSON.parse(localStorage.getItem('certificados')) || [];
+        certificados.push({ nome, sobrenome, numeroCertificado });
+        localStorage.setItem('certificados', JSON.stringify(certificados));
+
+        // Exibe a mensagem de sucesso
         document.getElementById('resultado').innerText = `Certificado válido para: ${nome} ${sobrenome} (Número: ${numeroCertificado})`;
     } else {
         document.getElementById('resultado').innerText = 'Número de certificado inválido!';
     }
+
+    // Limpa os campos
+    document.getElementById('nome').value = '';
+    document.getElementById('sobrenome').value = '';
+    document.getElementById('numero-certificado').value = '';
 });
 
-// Função para gerar certificados aleatórios e armazená-los (em memória)
-let listaCertificados = [];
+// Função para visualizar os dados armazenados
+function verificarDados() {
+    const certificados = JSON.parse(localStorage.getItem('certificados')) || [];
+    const listaCertificados = document.getElementById('lista-certificados');
 
-function gerarCertificados() {
-    const nome = prompt("Digite o nome do certificado:");
-    const sobrenome = prompt("Digite o sobrenome do certificado:");
+    listaCertificados.innerHTML = '';
 
-    const numeroCertificado = gerarNumeroCertificado();
-    listaCertificados.push({ nome, sobrenome, numeroCertificado });
-
-    console.log("Certificados Gerados:", listaCertificados);
-
-    alert(`Certificado gerado! Nome: ${nome} ${sobrenome}, Número: ${numeroCertificado}`);
+    if (certificados.length === 0) {
+        listaCertificados.innerHTML = '<li>Não há certificados armazenados.</li>';
+    } else {
+        certificados.forEach(certificado => {
+            const item = document.createElement('li');
+            item.innerText = `Nome: ${certificado.nome} ${certificado.sobrenome} - Certificado: ${certificado.numeroCertificado}`;
+            listaCertificados.appendChild(item);
+        });
+    }
 }
 
-// Caso queira armazenar em uma planilha Google ou outro banco de dados, precisaria de uma integração com uma API, como o Google Sheets API.
+// Carregar os dados salvos ao iniciar a página
+window.onload = function() {
+    verificarDados();
+};
