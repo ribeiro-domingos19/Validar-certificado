@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Bancário</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/copy.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Informações de Pagamento</h1>
+    </header>
+    <main>
+        <p><strong>Banco:</strong> BFA (Banco de Fomento Angola)</p>
+        <p><strong>Agência:</strong> 1234</p>
+        <p><strong>Conta Corrente:</strong> 567890-1</p>
+        <p><strong>IBAN:</strong> 
+            <span id="iban">AO06 0040 0001 2345 6789 0123</span> 
+            <button onclick="copiarIBAN()">Copiar</button>
+        </p>
+        <p><strong>PIX:</strong> seu-email@exemplo.com</p>
+    </main>
+</body>
+</html>
