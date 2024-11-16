@@ -1,0 +1,101 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(100deg, #5D9CF4, #AADAB9);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulário */
+form#cadastroForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.1s ease-in-out;
+}
+
+form input:focus {
+    border-color: #00b4d8;
+}
+
+form button {
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #023e8a;
+}
+
+form img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* Mensagem de sucesso */
+#successMsg {
+    margin-top: 20px;
+    color: #4caf50;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    form#cadastroForm {
+        padding: 15px;
+    }
+
+    form button {
+        padding: 10px;
+    }
+}
