@@ -12,7 +12,6 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
         nome: nome,
         email: email,
         senha: senha,
-        numeroReferencia: numeroReferencia
     }).then(() => {
         alert("Cadastro realizado com sucesso!");
         document.getElementById("cadastroForm").reset();
