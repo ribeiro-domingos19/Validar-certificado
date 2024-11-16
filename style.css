@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Estilos gerais */
 body {
     font-family: 'Arial', sans-serif;
@@ -99,3 +100,96 @@ form img {
         padding: 10px;
     }
 }
+=======
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do container principal */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Título da página */
+h1 {
+    text-align: center;
+}
+
+/* Estilo dos campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo do botão de "Validar" */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do botão de "Ver Certificados Armazenados" */
+#ver-dados {
+    margin-top: 20px;
+    margin-bottom: 5px;/* Espaçamento superior */
+}
+
+/* Estilo da mensagem de resultado */
+#resultado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo do div de certificados salvos */
+#dados-salvos {
+    margin-top: 30px;
+}
+
+/* Lista de certificados */
+#lista-certificados {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+#lista-certificados li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Para o caso de não haver certificados salvos */
+#lista-certificados li.no-data {
+    font-style: italic;
+    color: #aaa;
+}
+>>>>>>> refs/remotes/origin/main

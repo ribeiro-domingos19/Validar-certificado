@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,3 +29,42 @@
     <script src="scripts/cadastro.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Certificado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Validação de Certificado</h1>
+        <form id="form-certificado">
+            <label for="nome">Primeiro Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="sobrenome">Último Nome:</label>
+            <input type="text" id="sobrenome" required>
+
+            <label for="numero-certificado">Número do Certificado:</label>
+            <input type="text" id="numero-certificado" required>
+
+            <button type="submit">Validar</button>
+        </form>
+
+        <div id="resultado"></div>
+
+        <button id="ver-dados" onclick="verificarDados()">Ver Certificados Armazenados</button>
+
+        <div id="dados-salvos">
+            <h3>Certificados Salvos:</h3>
+            <ul id="lista-certificados"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+            </html>
+>>>>>>> refs/remotes/origin/main
